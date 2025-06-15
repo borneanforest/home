@@ -1,7 +1,7 @@
 // Constants
 const ITEMS_PER_PAGE = 4;
 const MAX_VISIBLE_PAGES = 5;
-const DEFAULT_PHONE_NUMBER = "6281352534448";
+const DEFAULT_PHONE_NUMBER = "6285349218545";
 
 // State
 const state = {
@@ -236,7 +236,7 @@ const cartView = {
       Species: ${item.species}
       Name: ${item.name}
       Price: ${utils.formatCurrency(item.price)}
-      Image: https://ahmdfkhri.github.io/aquaflora/data/images/${item.image}`).join('\n\n');
+      Image: https://borneanforest.github.io/home/data/images/${item.image}`).join('\n\n');
 
     const total = state.cart.reduce((sum, item) => sum + item.price, 0);
     return encodeURIComponent(`Hello, I would like to order the following aquatic plants:\n\n${items}\n\n*TOTAL: Rp ${utils.formatCurrency(total)}*\n\nPlease confirm availability. Thank you.`);
