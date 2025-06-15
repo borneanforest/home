@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/shop.css">
+  <title>Welcome to AquaFlora</title>
+</head>
+<body>
+  <!-- Floating Header -->
+  <header>
+    <div class="upper-header">
+      <a href="index.html" class="brand">
+        <h1><i class="fa-solid fa-seedling"></i> AquaFlora</h1>
+        <p>Aquatic plant specialist you can trust</p>
+      </a>
+      <nav>
+        <a href="commitment.html"><i class="fa-solid fa-book"></i>Our Commitment</a>
+        <a href="shop.html"><i class="fa-solid fa-shopping-cart"></i>Shop</a>
+      </nav>
+    </div>
+
+    <!-- Live Product Query -->
+    <div class="query-container">
+      <div class="search-container">
+        <i class="fas fa-search"></i>
+        <input type="text" id="search-input" placeholder="Plant name, species, id...">
+      </div>
+      <div class="filter-container">
+        <label class="toggle-soldout">
+          <input type="checkbox" id="show-soldout">
+          <span class="slider"></span>
+          <span class="label-text">Show Sold Out</span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div id="query-exception"></div>
+    <div class="query-info"></div>
+    <div class="products-grid" id="products-container">
+      <!-- Produk akan di-generate oleh JavaScript -->
+    </div>
+    <div class="query-info"></div>
+    <div class="pagination" id="pagination-container">
+      <button id="prev-btn" disabled><i class="fas fa-chevron-left"></i></button>
+      <div id="page-numbers"></div>
+      <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </main>
+
+  <!-- Cart Floater -->
+  <div class="cart-container" id="cart-container">
+    <div class="cart-info">
+      <div class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="cart-count" id="cart-count">0</div>
+      </div>
+      <div class="cart-total">
+        Total: <span id="total-amount">$ 0</span>
+      </div>
+    </div>
+    <button class="whatsapp-btn" id="whatsapp-btn" disabled>
+      <i class="fab fa-whatsapp"></i> Order via WhatsApp
+    </button>
+  </div>
+
+  <script type="module" src="src/js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "AP00002",
+    "name": "Water Wisteria",
+    "species": "Hygrophila difformis",
+    "price": 6.99,
+    "available": true,
+    "image": "AP00002_water_wisteria.webp",
+    "created_at": "2025-06-15T05:26:36.861Z"
+  },
+  {
+    "id": "AP00001",
+    "name": "Java Fern",
+    "species": "Leptochilus pteropus",
+    "price": 5.99,
+    "available": false,
+    "image": "AP00001_java_fern.webp",
+    "created_at": "2025-06-15T05:10:37.700Z"
+  }
+]

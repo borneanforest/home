@@ -1,0 +1,6 @@
+@import url("base.css");
+@import url("product.css");
+
+main {
+  padding-bottom: 4rem;
+}

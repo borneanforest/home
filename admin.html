@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/admin.css">
+  <title>Admin | AquaFlora</title>
+</head>
+<body>
+  <!-- Floating Header -->
+  <header>
+    <div class="upper-header">
+      <a href="/index.html" class="brand">
+        <h1><i class="fa-solid fa-seedling"></i> AquaFlora <span>Admin</span></h1>
+        <p>Aquatic plant specialist you can trust</p>
+      </a>
+    </div>
+
+    <!-- Live Product Query -->
+    <div class="query-container">
+      <div class="search-container">
+        <i class="fas fa-search"></i>
+        <input type="text" id="search-input" placeholder="Plant name, species, id...">
+      </div>
+      <div class="filter-container">
+        <label class="toggle-soldout">
+          <input type="checkbox" id="show-soldout">
+          <span class="slider"></span>
+          <span class="label-text">Show Sold Out</span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div id="query-exception"></div>
+    <div class="query-info"></div>
+    <div class="products-grid" id="products-container">
+      <!-- Produk akan di-generate oleh JavaScript -->
+    </div>
+    <div class="query-info"></div>
+    <div class="pagination" id="pagination-container">
+      <button id="prev-btn" disabled><i class="fas fa-chevron-left"></i></button>
+      <div id="page-numbers"></div>
+      <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </main>
+
+  <!-- Add/Edit Modal -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title">Add Product</h2>
+      <form id="product-form">
+        <input type="hidden" id="product-id" />
+        <label>Name:</label>
+        <input type="text" id="product-name" required><br>
+        <label>Species:</label>
+        <input type="text" id="product-species" required><br>
+        <label>Price:</label>
+        <input type="number" id="product-price" step="0.01" required><br>
+        <label>Available:</label>
+        <input type="checkbox" id="product-available"><br>
+        <label>Image:</label>
+        <input type="file" id="product-image" accept="image/*"><br>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Delete confirmation -->
+  <div id="delete-modal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to delete <span id="delete-product-name"></span>?</p>
+      <button id="confirm-delete">Yes</button>
+      <button id="cancel-delete">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Floating add button -->
+  <div class="floating-add">
+    <button id="add-product-btn" class="add-button"><i class="fa-solid fa-plus"></i></button>
+    <button id="download-zip-btn" class="download-button"><i class="fa-solid fa-download"></i></button>
+  </div>
+
+  <script type="module" src="src/js/admin.js"></script>
+</body>
+</html>
